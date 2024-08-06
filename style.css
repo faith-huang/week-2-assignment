@@ -1,0 +1,400 @@
+@import url("https://fonts.google.com/specimen/Bruno+Ace+SC?query=Bruno+Ace");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* setting */
+
+body {
+  font-family: "Bruno Ace SC", serif;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* outline: 1px solid black; */
+}
+
+a {
+  text-decoration: none;
+  height: auto;
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* layout */
+
+.header {
+  background-color: #000;
+  color: #d1d1d1;
+  padding: 40px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav li {
+  margin: 10px;
+}
+
+/* component */
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 32px;
+}
+
+.btn-light {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn-dark {
+  background-color: #000;
+  color: #fff;
+}
+
+/* page */
+
+.banner {
+  background-color: #000;
+  color: #fff;
+}
+
+.banner-title-strong {
+  display: block;
+  text-align: right;
+}
+
+.intro {
+  background-image: url("./img/background-img.png");
+
+  /* 以下兩個寫法可讓背景填滿畫面而不是用重複背景圖的方式 */
+  /* 不要另外設定高度以防內容增減會破壞結構，請直接用內容來撐開高度就好 */
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 160px 0;
+}
+
+.intro-desc {
+  width: 526px;
+}
+
+.about {
+  padding: 160px 0;
+}
+
+.about-list {
+  width: 636px;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  gap: 24px;
+}
+
+.about-list li {
+  width: calc(50% - 12px);
+  /* 有一種寫法是直接寫48%，但如果覺得不夠準確，可以用50% - 12px創造出左右加起來24px */
+  /* calc中加法和減法符號「左右邊一定要有空白字符」 */
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.08);
+  font-size: 16px;
+  padding: 16px;
+}
+
+.about-desc {
+  width: 526px;
+}
+
+.about-desc p {
+  font-size: 24px;
+}
+
+.contact {
+  background: linear-gradient(rgba(5, 0, 20, 1), rgba(1, 2, 30, 0.89));
+  /* 如果漸層角度設定為0的時候，會由下往上過渡 */
+  /* 反過來要由上往下的話，要設定180deg */
+  padding: 96px 0;
+}
+
+.social-link {
+  border-radius: 40px;
+}
+
+.social-link:hover {
+  box-shadow: 0px 0px 16px 3px rgba(144, 148, 255, 0.9);
+  transition: 0.5s;
+}
+
+.project {
+  padding: 160px 0;
+}
+
+.project-title {
+  width: 746px;
+  margin-left: auto;
+}
+
+.project-title h2 {
+  font-size: 64px;
+}
+
+/* utils */
+.container {
+  width: 1296px;
+  margin: 0 auto;
+}
+
+.h1 {
+  font-size: 128px;
+}
+
+.h2 {
+  font-size: 40px;
+}
+
+.fs-1 {
+  font-size: 32px;
+}
+
+.fs-2 {
+  font-size: 24px;
+}
+
+.fs-3 {
+  font-size: 20px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-start {
+  align-items: start;
+}
+
+.profile-img {
+  margin-right: 24px;
+}
+
+.text-primary {
+  color: #00ffa3;
+  font-size: 128px;
+}
+
+.content {
+  width: 100%;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.mr-6 {
+  margin-right: 24px;
+}
+
+.mt-8 {
+  margin-top: 32px;
+}
+
+.mt-6 {
+  margin-top: 36px;
+}
+
+.mb-6 {
+  margin-bottom: 24px;
+}
+
+.contact-me h3 {
+  color: #fff;
+  font-size: 64px;
+  width: 100%;
+  margin-right: 16px;
+}
+
+.discord {
+  margin-left: 113px;
+}
+
+.h3 {
+  display: block;
+  margin-left: 113px;
+}
+
+.social-media {
+  gap: 20px;
+}
+
+.img-1 {
+  width: 196px;
+  height: 196px;
+}
+
+.last-img {
+  height: 306px;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 28px;
+}
+
+.img-2 {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-title {
+  display: flex;
+  background-color: #000;
+  width: 100%;
+  padding: 40px 312px 40px 312px;
+  justify-content: center;
+}
+
+.footer-title h3 {
+  font-size: 16px;
+  color: #fff;
+}
